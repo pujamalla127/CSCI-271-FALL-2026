@@ -1,4 +1,4 @@
-//puja malla assignment 3
+//puja malla assignment 3 tempcheck 
 #include <iostream>       // gives access to cin and cout
 using namespace std;      // lets us write cout instead of std::cout
 
@@ -25,7 +25,7 @@ int main(){
 }
 
 
-// Puja Malla ,  Assignment 3
+// Puja Malla ,  Assignment 3 eligibility
 
 #include <iostream>       // gives access to cin and cout
 using namespace std;      // lets us write cout instead of std::cout
