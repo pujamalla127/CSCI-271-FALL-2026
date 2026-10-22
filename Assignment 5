@@ -1,1 +1,125 @@
+//puja malla assignment5  array utils
+#include <iostream> // Allows us to use cin and cout
+using namespace std;
+// Function 1: Print numbers in normal order
+void printForward(const int arr[], int size) {
+    cout << "Forward: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " "; // Print each number
+    }
+    cout << endl;
+}
+// Function 2: Print numbers in reverse order
+void printReverse(const int arr[], int size) {
+    cout << "Reverse: ";
+    for (int i = size - 1; i >= 0; i--) {
+        cout << arr[i] << " "; // Print from last to first
+    }
+    cout << endl;
+}
+// Function 3: Count numbers greater than limit
+int countAbove(const int arr[], int size, int limit) {
+    int count = 0; // Start counting from 0
+    for (int i = 0; i < size; i++) {
+        if (arr[i] > limit) { // Check if number is greater
+            count++; // Increase count
+        }
+    }
+    return count; // Return the final count
+}
+int main() {
+    const int SIZE = 6; // Array has 6 numbers
+    int values[SIZE] = {14, 3, 27, 9, 50, 21};
+    int limit; // Store user's number
+    printForward(values, SIZE); // Print normal order
+    printReverse(values, SIZE); // Print reverse order
+    cout << "Count values above: " << flush; // Show prompt immediately
+    cin >> limit; // Read user's number
+    cout << "Count: " << countAbove(values, SIZE, limit) << endl;
+    return 0; // End program
+}
+
+//puja malla  assignment 5  search count 
+#include <iostream> // Allows us to use cin and cout
+using namespace std;
+int main() {
+    const int SIZE = 10; // Array store 10 numbers
+    int data[SIZE] = {7, 12, 5, 12, 40, 3, 12, 8, 21, 5};
+
+    int target; // Number the user wants to search
+    int foundIndex = -1; // -1 means not found yet
+    int count = 0; // Counts how many times target appears
+
+    cout << "Enter a number to search for: ";
+    cin >> target; // Store the user's number
+
+    // Loop through all 10 numbers
+    for (int i = 0; i < SIZE; i++) {
+
+        if (data[i] == target) { // Check if current number matches
+
+            count++; // Increase count by 1
+
+            if (foundIndex == -1) { // Only for the first match
+                foundIndex = i; // Save the first matching index
+            }
+        }
+    }
+
+    // If the number was found
+    if (foundIndex != -1) {
+        cout << target << " first found at index "
+             << foundIndex << endl;
+
+        cout << target << " appears " << count
+             << " time(s)" << endl;
+    }
+    else { // If the number was not found
+        cout << target << " was not found." << endl;
+    }
+
+    return 0; // End program successfully
+}
+
+
+//puja malla Assignment 5 score stats
+#include <iostream> // Allows us to use cin and cout
+using namespace std; // So we don't need to write std::
+int main() { 
+    const int SIZE = 5; // Number of test scores
+    int scores[SIZE]; // Array to store 5 scores
+    // First looP to ask user for 5 scores
+    for (int i = 0; i < SIZE; i++) {
+        // i starts at 0, increases by 1, stops when i reaches 5
+        cout << "please enter score " << i + 1 << ": "; // Ask for score
+        cin >> scores[i]; // Store score in the array
+    }
+    int sum = 0; // Start sum at 0
+    int highest = scores[0]; // First score is initially highest
+    int lowest = scores[0]; // First score is initially lowest
+    cout << "Scores: "; // Print scores label
+    // Second loop: Print scores and calculate statistics
+    for (int i = 0; i < SIZE; i++) {
+        cout << scores[i] << " "; // Print each score
+        sum = sum + scores[i]; // Add score to sum
+        // Check if current score is greater than highest
+        if (scores[i] > highest)
+            highest = scores[i]; // Update highest score
+        // Check if current score is smaller than lowest
+        if (scores[i] < lowest)
+            lowest = scores[i]; // Update lowest score
+    }
+    // Convert sum to double before dividing to keep decimals
+    double average = static_cast<double>(sum) / SIZE;
+    cout << endl; // Move to next line
+    cout << "Sum: " << sum << endl; // Print sum
+    cout << "Average: " << average << endl; // Print average
+    cout << "Highest: " << highest << endl; // Print highest
+    cout << "Lowest: " << lowest << endl; // Print lowest
+    return 0; // End program successfully
+}
+
+
+
+
 
