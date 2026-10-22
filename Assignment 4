@@ -1,1 +1,44 @@
+// Puja Malla ,  Assignment 4 mult_table
 
+
+# include <iostream>   // gives access to cin and cout
+
+using namespace std;     // lets us write cout instead of std::cout
+
+int main(){               
+int whole_num;           // initialising the whole_num varibale to store the  user's input 
+
+cout << "please enter the whole number: " << endl; //prints the message to the screen
+
+cin >> whole_num;     //asks for the user input and store the value in the variable 
+
+for (int i = 1; i <= 10; i++ ) {   // starts i=1 , loop keep running until the i <=10 
+    // and increase i by 1 everytime the loop runs 
+
+    cout << whole_num << "*" << i << "=" << whole_num * i  << endl; //multiplies the user number 
+    //by i and display the result 
+}
+
+return 0;  // program ends 
+}
+
+// Puja Malla ,  Assignment 4 menu validate 
+# include <iostream>   // gives access to cin and cout
+using namespace std;     // lets us write cout instead of std::cout
+
+int main(){               
+int choice;           // initialising the choice varibale to store the  user's input 
+
+do {              // starts the loop 
+    cout << "please enter the menu choice: \n1 2 or 3" << endl; //displays the menu choices 
+
+    cin >> choice;     //asks for the user input and store the value in the variable 
+
+    if (choice !=1 && choice != 2 && choice != 3){  // checks if the choice is not 1,2,and 3 
+    cout << "invalid option try again";  // display error message 
+    }
+} while (choice !=1 && choice != 2 && choice != 3);  // checks the condition after each loop and repeats if the choice is still invalid 
+    
+cout << "you selected option " << choice ;  //prints the message 
+return 0;  // program ends 
+}
