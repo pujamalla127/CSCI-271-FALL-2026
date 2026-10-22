@@ -1,1 +1,25 @@
+//puja malla assignment 3
+#include <iostream>       // gives access to cin and cout
+using namespace std;      // lets us write cout instead of std::cout
 
+int main(){
+    int temperature ;     // stores the user's input temperature
+
+    cout << "Enter temperature (F): "; // prints the message 
+    cin >> temperature;        // ask for user input for temperature
+
+    // check each range in order, from lowest to highest
+    if (temperature < 32) {
+        cout << "thats freezing " << endl;   // below 32
+    }
+    else if (temperature <= 59) {
+        cout << "thats cold" << endl;        // 32 to 59
+    }
+    else if (temperature <= 75) {
+        cout << " thats mild" << endl;       // 60 to 75
+    }
+    else {
+        cout << " thats hot" << endl;        // 76 and above
+    }
+    return 0;                // program ends 
+}
