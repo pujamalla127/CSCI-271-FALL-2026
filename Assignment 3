@@ -23,3 +23,29 @@ int main(){
     }
     return 0;                // program ends 
 }
+
+
+// Puja Malla ,  Assignment 3
+
+#include <iostream>       // gives access to cin and cout
+using namespace std;      // lets us write cout instead of std::cout
+
+int main() {
+    int age;              // to store the user's age
+    int isMember;         // to hold 1 (yes) or 0 (no) for membership
+
+    cout << "Enter your age: ";    // prints the message 
+    cin >> age;                    // takes user input for age
+
+    cout << "Are you a member? (1 = yes, 0 = no): "; // prints the message
+    cin >> isMember;              // ask for user input for membership status
+
+    // qualifies if 60 or older age, or if 18+ and a member
+    if (age >= 60 || (age >= 18 && isMember == 1)) {
+        cout << "You qualify for the discount." << endl;
+
+    } else {        // if it doesn't meet either condition above
+        cout << "You do not qualify for the discount." << endl;
+    }
+    return 0;             // program ends 
+}
